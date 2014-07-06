@@ -1,0 +1,73 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+Element providing solution to no problem in particular.
+
+##### Example
+
+    <polymer-image></polymer-image>
+
+@element polymer-image
+@blurb Element providing solution to no problem in particular.
+@status alpha
+@homepage http://polymerlabs.github.io/polymer-image
+-->
+<polymer-element name="polymer-image" attributes="notitle author imgsrc width height">
+
+  <template>
+
+    <link rel="stylesheet" href="polymer-image.css" />
+    <img src="{{imgsrc}}" style="width:{{width}};height:{{height}};" alt="Hello there">
+
+  </template>
+
+  <script>
+
+    Polymer('polymer-image', {
+      /**
+       * The `author` attribute sets an initial author
+       * 
+       * @attribute author
+       * @type string
+       */
+      author: 'Devendra Dhanal',
+      ready: function() {
+        // Ready is a lifecycle callback.
+        // You can do setup work in here.
+        // More info: http://www.polymer-project.org/docs/polymer/polymer.html#lifecyclemethods
+      },
+
+      /**
+       * The `sayHello` method will return a greeting
+       * 
+       * @method sayHello
+       * @return {String} Returns a string greeting.
+       * @param {String} greeting Pass in a specific greeting
+       */
+      sayHello: function(greeting) {
+        var response = greeting || 'Hello World!';
+        return 'polymer-image says, ' + response;
+      },
+
+      /**
+       * The `polymer-image-lasers-success` event is fired whenever we
+       * call fireLasers.
+       * 
+       * @event polymer-image-lasers-success
+       */
+
+      /**
+       * The `fireLasers` method will fire the lasers. At least
+       * it will dispatch an event that claims lasers were fired :)
+       * 
+       * @method fireLasers
+       */
+      fireLasers: function() {
+        this.fire('polymer-image-lasers-success', { sound: 'Pew pew pew!' });
+      }
+
+    });
+
+  </script>
+
+</polymer-element>

@@ -1,0 +1,19 @@
+{
+  "name": "polymer-image",
+  "version": "0.1.0",
+  "authors": [
+    "Anonymous <devendradhanal@gmail.com>"
+  ],
+  "description": "Element providing solution to adding images in polymer designer.",
+  "keywords": "images, polymer, web-components",
+  "main": "polymer-image.html",
+  "license": "MIT",
+  "homepage": "https://github.com/<USERNAME>/polymer-image/",
+  "ignore": [
+    "**/.*"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.3.3",
+    "polymer-test-tools": "Polymer/polymer-test-tools#~0.3.3"
+  }
+}
